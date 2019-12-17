@@ -41,5 +41,10 @@ namespace FastFoodDemo
         {
 
         }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
