@@ -84,21 +84,30 @@ namespace FastFoodDemo
 
         private void BtAdd_Click(object sender, EventArgs e)
         {
-            string[] arr = new string[5];
-            arr[0] = cbItens.SelectedItem.ToString();
-            arr[1] = txtPreco.Text;
-            arr[2] = txtQtde.Text;
-            arr[3] = DateTime.Now.ToString();
-            arr[4] = txtTotal.Text;
+           if (cbItens.Text == "")
+            {
+                MessageBox.Show("Selecione um item da categoria");
+            }
+            else
+            {
+                string[] arr = new string[5];
+                arr[0] = cbItens.SelectedItem.ToString();
+                arr[1] = txtPreco.Text;
+                arr[2] = txtQtde.Text;
+                arr[3] = DateTime.Now.ToString();
+                arr[4] = txtTotal.Text;
 
-            ListViewItem lvi = new ListViewItem(arr);
-            listView1.Items.Add(lvi);
-            txtSubTotal.Text = (Convert.ToInt16(txtSubTotal.Text) + Convert.ToInt16(txtTotal.Text)).ToString();
+                ListViewItem lvi = new ListViewItem(arr);
+                listView1.Items.Add(lvi);
+                txtSubTotal.Text = (Convert.ToInt16(txtSubTotal.Text) + Convert.ToInt16(txtTotal.Text)).ToString();
 
-            txtPreco.Text = "";
-            txtQtde.Text = "";
-            txtTotal.Text = "";
-            cbItens.Text = "";
+                txtPreco.Text = "";
+                txtQtde.Text = "";
+                txtTotal.Text = "";
+                cbItens.Text = "";
+            }
+
+            
         }
 
         private void BtRemover_Click(object sender, EventArgs e)
@@ -138,6 +147,11 @@ namespace FastFoodDemo
             {
                 txtTroco.Text = (Convert.ToInt16(txtPagamento.Text) - Convert.ToInt16(txtValorTotal.Text)).ToString();
             }
+        }
+
+        private void FirstCustomControl_Load(object sender, EventArgs e)
+        {
+            rbLanche.Checked = true;
         }
     }
 }

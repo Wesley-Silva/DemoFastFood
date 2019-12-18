@@ -385,9 +385,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.label3.Location = new System.Drawing.Point(505, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 20);
+            this.label3.Size = new System.Drawing.Size(247, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Selecione o Item";
+            this.label3.Text = "Selecione o item da categoria";
             // 
             // button1
             // 
@@ -445,7 +445,7 @@
             this.groupBox1.Size = new System.Drawing.Size(420, 90);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Selecione o item";
+            this.groupBox1.Text = "Selecione uma categoria";
             // 
             // FirstCustomControl
             // 
@@ -479,6 +479,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FirstCustomControl";
             this.Size = new System.Drawing.Size(817, 581);
+            this.Load += new System.EventHandler(this.FirstCustomControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
