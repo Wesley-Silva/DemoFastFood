@@ -99,7 +99,7 @@ namespace FastFoodDemo
 
                 ListViewItem lvi = new ListViewItem(arr);
                 listView1.Items.Add(lvi);
-                txtSubTotal.Text = (Convert.ToInt16(txtSubTotal.Text) + Convert.ToInt16(txtTotal.Text)).ToString();
+                txtSubTotal.Text = (Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotal.Text)).ToString();
 
                 txtPreco.Text = "";
                 txtQtde.Text = "";
@@ -129,7 +129,7 @@ namespace FastFoodDemo
         {
             if (txtQtde.Text.Length > 0)
             {
-                txtTotal.Text = (Convert.ToInt16(txtPreco.Text) * Convert.ToInt16(txtQtde.Text)).ToString();
+                txtTotal.Text = (Convert.ToDecimal(txtPreco.Text) * Convert.ToInt16(txtQtde.Text)).ToString();
             }
         }
 
@@ -137,7 +137,7 @@ namespace FastFoodDemo
         {
             if (txtDesconto.Text.Length > 0)
             {
-                txtValorTotal.Text = (Convert.ToInt16(txtSubTotal.Text) - Convert.ToInt16(txtDesconto.Text)).ToString();
+                txtValorTotal.Text = (Convert.ToDecimal(txtSubTotal.Text) - Convert.ToDecimal(txtDesconto.Text)).ToString();
             }
         }
 
@@ -152,6 +152,110 @@ namespace FastFoodDemo
         private void FirstCustomControl_Load(object sender, EventArgs e)
         {
             rbLanche.Checked = true;
+        }
+
+        private void CbItens_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbItens.SelectedItem.ToString() == "Cheeseburger Com Bacon")
+            {
+                txtPreco.Text = "12,80";
+            }else if(cbItens.SelectedItem.ToString() == "Big Mac")
+            {
+                txtPreco.Text = "14,50";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Shack Burger")
+            {
+                txtPreco.Text = "17,35";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Steakburger")
+            {
+                txtPreco.Text = "25,10";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Quarter Pounder")
+            {
+                txtPreco.Text = "33,45";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Coca Cola")
+            {
+                txtPreco.Text = "5,50";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Suco")
+            {
+                txtPreco.Text = "6,70";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Antartica")
+            {
+                txtPreco.Text = "4,78";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Sprint")
+            {
+                txtPreco.Text = "4,50";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Taubaina")
+            {
+                txtPreco.Text = "3,80";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Fritas Com Waffle")
+            {
+                txtPreco.Text = "15,50";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Fritas Arby's")
+            {
+                txtPreco.Text = "19,90";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Fritas Cajun")
+            {
+                txtPreco.Text = "22,85";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Fritas Cremosa")
+            {
+                txtPreco.Text = "27,35";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Gelado Wendy's")
+            {
+                txtPreco.Text = "7,60";
+            }
+            else if (cbItens.SelectedItem.ToString() == "MC Flurry")
+            {
+                txtPreco.Text = "8,99";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Torta de Maça gelada")
+            {
+                txtPreco.Text = "4,55";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Rainha dos Laticínios")
+            {
+                txtPreco.Text = "3,99";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Gelado Melado")
+            {
+                txtPreco.Text = "4,99";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Brócolis c/ Catupiry")
+            {
+                txtPreco.Text = "45,60";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Alho e Óleo")
+            {
+                txtPreco.Text = "32,75";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Calabresa")
+            {
+                txtPreco.Text = "35,99";
+            }
+            else if (cbItens.SelectedItem.ToString() == "Mussarela")
+            {
+                txtPreco.Text = "37,10";
+            }
+            else if (cbItens.SelectedItem.ToString() == "4 Queijos")
+            {
+                txtPreco.Text = "27,99";
+            }
+            else
+            {
+                txtPreco.Text = "0";
+            }
+
         }
     }
 }

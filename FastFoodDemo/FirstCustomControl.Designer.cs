@@ -101,6 +101,7 @@
             this.cbItens.Name = "cbItens";
             this.cbItens.Size = new System.Drawing.Size(254, 21);
             this.cbItens.TabIndex = 3;
+            this.cbItens.SelectedIndexChanged += new System.EventHandler(this.CbItens_SelectedIndexChanged);
             // 
             // rbLanche
             // 
