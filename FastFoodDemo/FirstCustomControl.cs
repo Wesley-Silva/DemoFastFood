@@ -87,6 +87,17 @@ namespace FastFoodDemo
            if (cbItens.Text == "")
             {
                 MessageBox.Show("Selecione um item da categoria");
+            } else if(txtQtde.Text == "0")
+            {
+                MessageBox.Show("A qtde não pode ser zero(0).");
+            }
+            else if (txtQtde.Text == "")
+            {
+                MessageBox.Show("A qtde não pode ser vazia.");
+            }
+            else if (txtQtde.Text.Length < 0)
+            {
+                MessageBox.Show("A qtde não pode ser negativa.");
             }
             else
             {
@@ -127,7 +138,12 @@ namespace FastFoodDemo
 
         private void TxtQtde_TextChanged(object sender, EventArgs e)
         {
-            if (txtQtde.Text.Length > 0)
+            if (txtQtde.Text.Contains("-"))
+            {
+                MessageBox.Show("A qtde não pode ser negativa.");
+                txtQtde.Text = "";
+                txtQtde.Focus();
+            }else if (txtQtde.Text.Length > 0)
             {
                 txtTotal.Text = (Convert.ToDecimal(txtPreco.Text) * Convert.ToInt16(txtQtde.Text)).ToString();
             }
