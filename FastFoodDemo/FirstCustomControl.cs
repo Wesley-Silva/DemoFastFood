@@ -131,5 +131,13 @@ namespace FastFoodDemo
                 txtValorTotal.Text = (Convert.ToInt16(txtSubTotal.Text) - Convert.ToInt16(txtDesconto.Text)).ToString();
             }
         }
+
+        private void TxtPagamento_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPagamento.Text.Length > 0)
+            {
+                txtTroco.Text = (Convert.ToInt16(txtPagamento.Text) - Convert.ToInt16(txtValorTotal.Text)).ToString();
+            }
+        }
     }
 }

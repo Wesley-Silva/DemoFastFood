@@ -266,6 +266,7 @@
             this.txtPagamento.Name = "txtPagamento";
             this.txtPagamento.Size = new System.Drawing.Size(126, 20);
             this.txtPagamento.TabIndex = 12;
+            this.txtPagamento.TextChanged += new System.EventHandler(this.TxtPagamento_TextChanged);
             // 
             // txtTroco
             // 
