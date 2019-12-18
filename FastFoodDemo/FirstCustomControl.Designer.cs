@@ -92,6 +92,7 @@
             this.btAdd.TabIndex = 1;
             this.btAdd.Text = "Adicionar Item";
             this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.BtAdd_Click);
             // 
             // cbItens
             // 
@@ -118,7 +119,7 @@
             // 
             this.rbFritas.AutoSize = true;
             this.rbFritas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFritas.Location = new System.Drawing.Point(138, 19);
+            this.rbFritas.Location = new System.Drawing.Point(160, 19);
             this.rbFritas.Name = "rbFritas";
             this.rbFritas.Size = new System.Drawing.Size(65, 20);
             this.rbFritas.TabIndex = 5;
@@ -131,7 +132,7 @@
             // 
             this.rbFrango.AutoSize = true;
             this.rbFrango.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFrango.Location = new System.Drawing.Point(138, 60);
+            this.rbFrango.Location = new System.Drawing.Point(161, 60);
             this.rbFrango.Name = "rbFrango";
             this.rbFrango.Size = new System.Drawing.Size(75, 20);
             this.rbFrango.TabIndex = 6;
@@ -156,7 +157,7 @@
             // 
             this.rbSobremesa.AutoSize = true;
             this.rbSobremesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSobremesa.Location = new System.Drawing.Point(322, 19);
+            this.rbSobremesa.Location = new System.Drawing.Point(295, 19);
             this.rbSobremesa.Name = "rbSobremesa";
             this.rbSobremesa.Size = new System.Drawing.Size(106, 20);
             this.rbSobremesa.TabIndex = 8;
@@ -179,6 +180,7 @@
             this.txtQtde.Size = new System.Drawing.Size(126, 20);
             this.txtQtde.TabIndex = 9;
             this.txtQtde.Text = "0";
+            this.txtQtde.TextChanged += new System.EventHandler(this.TxtQtde_TextChanged);
             // 
             // txtTotal
             // 
@@ -200,6 +202,7 @@
             this.btRemover.TabIndex = 1;
             this.btRemover.Text = "Remover Item";
             this.btRemover.UseVisualStyleBackColor = false;
+            this.btRemover.Click += new System.EventHandler(this.BtRemover_Click);
             // 
             // listView1
             // 
@@ -418,7 +421,7 @@
             // 
             this.rbPizza.AutoSize = true;
             this.rbPizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbPizza.Location = new System.Drawing.Point(322, 60);
+            this.rbPizza.Location = new System.Drawing.Point(295, 60);
             this.rbPizza.Name = "rbPizza";
             this.rbPizza.Size = new System.Drawing.Size(63, 20);
             this.rbPizza.TabIndex = 8;
