@@ -280,6 +280,7 @@
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(126, 20);
             this.txtDesconto.TabIndex = 12;
+            this.txtDesconto.TextChanged += new System.EventHandler(this.TxtDesconto_TextChanged);
             // 
             // label15
             // 
