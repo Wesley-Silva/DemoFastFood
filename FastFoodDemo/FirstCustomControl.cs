@@ -31,55 +31,55 @@ namespace FastFoodDemo
         {
             ColorRadioButton();
             cbItens.Items.Clear();
-            cbItens.Items.Add("Cheeseburger Com Bacon");
-            cbItens.Items.Add("Big Mac");
-            cbItens.Items.Add("Shack Burger");
-            cbItens.Items.Add("Steakburger");
-            cbItens.Items.Add("Quarter Pounder");
+            cbItens.Items.Add("Lanche - Cheeseburger Com Bacon");
+            cbItens.Items.Add("Lanche - Big Mac");
+            cbItens.Items.Add("Lanche - Shack Burger");
+            cbItens.Items.Add("Lanche - Steakburger");
+            cbItens.Items.Add("Lanche - Quarter Pounder");
         }
 
         private void RbBebidas_CheckedChanged(object sender, EventArgs e)
         {
             ColorRadioButton();
             cbItens.Items.Clear();
-            cbItens.Items.Add("Coca Cola");
-            cbItens.Items.Add("Suco");
-            cbItens.Items.Add("Antartica");
-            cbItens.Items.Add("Sprint");
-            cbItens.Items.Add("Taubaina");
+            cbItens.Items.Add("Suco - Coca Cola");
+            cbItens.Items.Add("Suco - Suco");
+            cbItens.Items.Add("Suco - Antartica");
+            cbItens.Items.Add("Suco - Sprint");
+            cbItens.Items.Add("Suco - Taubaina");
         }
 
         private void RbFritas_CheckedChanged(object sender, EventArgs e)
         {
             ColorRadioButton();
             cbItens.Items.Clear();
-            cbItens.Items.Add("Fritas Com Waffle");
-            cbItens.Items.Add("Fritas Arby's");
-            cbItens.Items.Add("Fritas Cajun");
-            cbItens.Items.Add("Fritas Animal");
-            cbItens.Items.Add("Fritas Cremosa");
+            cbItens.Items.Add("Fritas - Waffle");
+            cbItens.Items.Add("Fritas - Arby's");
+            cbItens.Items.Add("Fritas - Cajun");
+            cbItens.Items.Add("Fritas - Animal");
+            cbItens.Items.Add("Fritas - Cremosa");
         }
 
         private void RbSobremesa_CheckedChanged(object sender, EventArgs e)
         {
             ColorRadioButton();
             cbItens.Items.Clear();
-            cbItens.Items.Add("Gelado Wendy's");
-            cbItens.Items.Add("MC Flurry");
-            cbItens.Items.Add("Torta de Maça gelada");
-            cbItens.Items.Add("Rainha dos Laticínios");
-            cbItens.Items.Add("Gelado Melado");
+            cbItens.Items.Add("Sobremesa - Gelado Wendy's");
+            cbItens.Items.Add("Sobremesa - MC Flurry");
+            cbItens.Items.Add("Sobremesa - Torta de Maça gelada");
+            cbItens.Items.Add("Sobremesa - Rainha dos Laticínios");
+            cbItens.Items.Add("Sobremesa - Gelado Melado");
         }
 
         private void RbPizza_CheckedChanged(object sender, EventArgs e)
         {
             ColorRadioButton();
             cbItens.Items.Clear();
-            cbItens.Items.Add("Brócolis c/ Catupiry");
-            cbItens.Items.Add("Alho e Óleo");
-            cbItens.Items.Add("Calabresa");
-            cbItens.Items.Add("Mussarela");
-            cbItens.Items.Add("4 Queijos");
+            cbItens.Items.Add("Pizza - Brócolis c/ Catupiry");
+            cbItens.Items.Add("Pizza - Alho e Óleo");
+            cbItens.Items.Add("Pizza - Calabresa");
+            cbItens.Items.Add("Pizza - Mussarela");
+            cbItens.Items.Add("Pizza - 4 Queijos");
         }
 
         private void BtAdd_Click(object sender, EventArgs e)
@@ -161,7 +161,7 @@ namespace FastFoodDemo
         {
             if (txtPagamento.Text.Length > 0)
             {
-                txtTroco.Text = (Convert.ToInt16(txtPagamento.Text) - Convert.ToInt16(txtValorTotal.Text)).ToString();
+                txtTroco.Text = (Convert.ToDecimal(txtPagamento.Text) - Convert.ToDecimal(txtValorTotal.Text)).ToString();
             }
         }
 
@@ -175,95 +175,95 @@ namespace FastFoodDemo
             if (cbItens.SelectedItem.ToString() == "Cheeseburger Com Bacon")
             {
                 txtPreco.Text = "12,80";
-            }else if(cbItens.SelectedItem.ToString() == "Big Mac")
+            }else if(cbItens.SelectedItem.ToString() == "Lanche - Big Mac")
             {
                 txtPreco.Text = "14,50";
             }
-            else if (cbItens.SelectedItem.ToString() == "Shack Burger")
+            else if (cbItens.SelectedItem.ToString() == "Lanche - Shack Burger")
             {
                 txtPreco.Text = "17,35";
             }
-            else if (cbItens.SelectedItem.ToString() == "Steakburger")
+            else if (cbItens.SelectedItem.ToString() == "Lanche - Steakburger")
             {
                 txtPreco.Text = "25,10";
             }
-            else if (cbItens.SelectedItem.ToString() == "Quarter Pounder")
+            else if (cbItens.SelectedItem.ToString() == "Lanche - Quarter Pounder")
             {
                 txtPreco.Text = "33,45";
             }
-            else if (cbItens.SelectedItem.ToString() == "Coca Cola")
+            else if (cbItens.SelectedItem.ToString() == "Suco - Coca Cola")
             {
                 txtPreco.Text = "5,50";
             }
-            else if (cbItens.SelectedItem.ToString() == "Suco")
+            else if (cbItens.SelectedItem.ToString() == "Suco - Suco")
             {
                 txtPreco.Text = "6,70";
             }
-            else if (cbItens.SelectedItem.ToString() == "Antartica")
+            else if (cbItens.SelectedItem.ToString() == "Suco - Antartica")
             {
                 txtPreco.Text = "4,78";
             }
-            else if (cbItens.SelectedItem.ToString() == "Sprint")
+            else if (cbItens.SelectedItem.ToString() == "Suco - Sprint")
             {
                 txtPreco.Text = "4,50";
             }
-            else if (cbItens.SelectedItem.ToString() == "Taubaina")
+            else if (cbItens.SelectedItem.ToString() == "Suco - Taubaina")
             {
                 txtPreco.Text = "3,80";
             }
-            else if (cbItens.SelectedItem.ToString() == "Fritas Com Waffle")
+            else if (cbItens.SelectedItem.ToString() == "Fritas - Waffle")
             {
                 txtPreco.Text = "15,50";
             }
-            else if (cbItens.SelectedItem.ToString() == "Fritas Arby's")
+            else if (cbItens.SelectedItem.ToString() == "Fritas - Arby's")
             {
                 txtPreco.Text = "19,90";
             }
-            else if (cbItens.SelectedItem.ToString() == "Fritas Cajun")
+            else if (cbItens.SelectedItem.ToString() == "Fritas - Cajun")
             {
                 txtPreco.Text = "22,85";
             }
-            else if (cbItens.SelectedItem.ToString() == "Fritas Cremosa")
+            else if (cbItens.SelectedItem.ToString() == "Fritas - Cremosa")
             {
                 txtPreco.Text = "27,35";
             }
-            else if (cbItens.SelectedItem.ToString() == "Gelado Wendy's")
+            else if (cbItens.SelectedItem.ToString() == "Sobremesa - Gelado Wendy's")
             {
                 txtPreco.Text = "7,60";
             }
-            else if (cbItens.SelectedItem.ToString() == "MC Flurry")
+            else if (cbItens.SelectedItem.ToString() == "Sobremesa - MC Flurry")
             {
                 txtPreco.Text = "8,99";
             }
-            else if (cbItens.SelectedItem.ToString() == "Torta de Maça gelada")
+            else if (cbItens.SelectedItem.ToString() == "Sobremesa - Torta de Maça gelada")
             {
                 txtPreco.Text = "4,55";
             }
-            else if (cbItens.SelectedItem.ToString() == "Rainha dos Laticínios")
+            else if (cbItens.SelectedItem.ToString() == "Sobremesa - Rainha dos Laticínios")
             {
                 txtPreco.Text = "3,99";
             }
-            else if (cbItens.SelectedItem.ToString() == "Gelado Melado")
+            else if (cbItens.SelectedItem.ToString() == "Sobremesa - Gelado Melado")
             {
                 txtPreco.Text = "4,99";
             }
-            else if (cbItens.SelectedItem.ToString() == "Brócolis c/ Catupiry")
+            else if (cbItens.SelectedItem.ToString() == "Pizza - Brócolis c/ Catupiry")
             {
                 txtPreco.Text = "45,60";
             }
-            else if (cbItens.SelectedItem.ToString() == "Alho e Óleo")
+            else if (cbItens.SelectedItem.ToString() == "Pizza - Alho e Óleo")
             {
                 txtPreco.Text = "32,75";
             }
-            else if (cbItens.SelectedItem.ToString() == "Calabresa")
+            else if (cbItens.SelectedItem.ToString() == "Pizza - Calabresa")
             {
                 txtPreco.Text = "35,99";
             }
-            else if (cbItens.SelectedItem.ToString() == "Mussarela")
+            else if (cbItens.SelectedItem.ToString() == "Pizza - Mussarela")
             {
                 txtPreco.Text = "37,10";
             }
-            else if (cbItens.SelectedItem.ToString() == "4 Queijos")
+            else if (cbItens.SelectedItem.ToString() == "Pizza - 4 Queijos")
             {
                 txtPreco.Text = "27,99";
             }
@@ -272,6 +272,18 @@ namespace FastFoodDemo
                 txtPreco.Text = "0";
             }
 
+        }
+
+        private void BtFinalizarPedido_Click(object sender, EventArgs e)
+        {
+            txtSubTotal.Text = "";
+            txtDesconto.Text = "";
+            txtVoucher.Text = "";
+            txtValorTotal.Text = "";
+            txtPagamento.Text = "";
+            txtTroco.Text = "";
+            listView1.Items.Clear();
+            MessageBox.Show("Obrigado!!! Seu pedido foi concluído com sucesso.");
         }
     }
 }
