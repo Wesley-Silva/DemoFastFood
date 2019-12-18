@@ -111,6 +111,7 @@ namespace FastFoodDemo
                 ListViewItem lvi = new ListViewItem(arr);
                 listView1.Items.Add(lvi);
                 txtSubTotal.Text = (Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotal.Text)).ToString();
+                txtValorTotal.Text = Convert.ToDecimal(txtSubTotal.Text).ToString();
 
                 txtPreco.Text = "";
                 txtQtde.Text = "";
@@ -153,7 +154,7 @@ namespace FastFoodDemo
         {
             if (txtDesconto.Text.Length > 0)
             {
-                txtValorTotal.Text = (Convert.ToDecimal(txtSubTotal.Text) - Convert.ToDecimal(txtDesconto.Text)).ToString();
+                txtValorTotal.Text = (Convert.ToDecimal(txtValorTotal.Text) - Convert.ToDecimal(txtDesconto.Text)).ToString();
             }
         }
 
@@ -168,11 +169,12 @@ namespace FastFoodDemo
         private void FirstCustomControl_Load(object sender, EventArgs e)
         {
             rbLanche.Checked = true;
+            txtVoucher.Text = "0";
         }
 
         private void CbItens_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbItens.SelectedItem.ToString() == "Cheeseburger Com Bacon")
+            if (cbItens.SelectedItem.ToString() == "Lanche - Cheeseburger Com Bacon")
             {
                 txtPreco.Text = "12,80";
             }else if(cbItens.SelectedItem.ToString() == "Lanche - Big Mac")
@@ -284,6 +286,20 @@ namespace FastFoodDemo
             txtTroco.Text = "";
             listView1.Items.Clear();
             MessageBox.Show("Obrigado!!! Seu pedido foi concluído com sucesso.");
+        }
+
+        private void TxtVoucher_TextChanged(object sender, EventArgs e)
+        {
+            if (txtVoucher.Text == "FOODFAST15%")
+            {
+                var valorObtido = Convert.ToDecimal(txtValorTotal.Text);
+                var valordesconto = Convert.ToString((valorObtido * 15) / 100);
+                txtValorTotal.Text = (Convert.ToDecimal(txtValorTotal.Text) - Convert.ToDecimal(valordesconto) - Convert.ToDecimal(txtDesconto.Text)).ToString();
+            }
+            else if(txtDesconto.Text.Length > 0)
+            {
+                txtValorTotal.Text = (Convert.ToDecimal(txtSubTotal.Text) - Convert.ToDecimal(txtDesconto.Text)).ToString();
+            }
         }
     }
 }

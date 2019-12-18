@@ -65,6 +65,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.rbPizza = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,6 +283,7 @@
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(126, 20);
             this.txtDesconto.TabIndex = 12;
+            this.txtDesconto.Text = "0";
             this.txtDesconto.TextChanged += new System.EventHandler(this.TxtDesconto_TextChanged);
             // 
             // label15
@@ -345,6 +347,7 @@
             this.txtVoucher.Name = "txtVoucher";
             this.txtVoucher.Size = new System.Drawing.Size(126, 20);
             this.txtVoucher.TabIndex = 12;
+            this.txtVoucher.TextChanged += new System.EventHandler(this.TxtVoucher_TextChanged);
             // 
             // label1
             // 
@@ -448,10 +451,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione uma categoria";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(401, 459);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Utilize: FOODFAST15%";
+            // 
             // FirstCustomControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtDesconto);
             this.Controls.Add(this.txtVoucher);
@@ -527,5 +541,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton rbPizza;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
