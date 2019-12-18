@@ -42,11 +42,11 @@ namespace FastFoodDemo
         {
             ColorRadioButton();
             cbItens.Items.Clear();
-            cbItens.Items.Add("Suco - Coca Cola");
-            cbItens.Items.Add("Suco - Suco");
-            cbItens.Items.Add("Suco - Antartica");
-            cbItens.Items.Add("Suco - Sprint");
-            cbItens.Items.Add("Suco - Taubaina");
+            cbItens.Items.Add("Bebidas - Coca Cola");
+            cbItens.Items.Add("Bebidas - Suco");
+            cbItens.Items.Add("Bebidas - Antartica");
+            cbItens.Items.Add("Bebidas - Sprint");
+            cbItens.Items.Add("Bebidas - Taubaina");
         }
 
         private void RbFritas_CheckedChanged(object sender, EventArgs e)
@@ -193,23 +193,23 @@ namespace FastFoodDemo
             {
                 txtPreco.Text = "33,45";
             }
-            else if (cbItens.SelectedItem.ToString() == "Suco - Coca Cola")
+            else if (cbItens.SelectedItem.ToString() == "Bebidas - Coca Cola")
             {
                 txtPreco.Text = "5,50";
             }
-            else if (cbItens.SelectedItem.ToString() == "Suco - Suco")
+            else if (cbItens.SelectedItem.ToString() == "Bebidas - Suco")
             {
                 txtPreco.Text = "6,70";
             }
-            else if (cbItens.SelectedItem.ToString() == "Suco - Antartica")
+            else if (cbItens.SelectedItem.ToString() == "Bebidas - Antartica")
             {
                 txtPreco.Text = "4,78";
             }
-            else if (cbItens.SelectedItem.ToString() == "Suco - Sprint")
+            else if (cbItens.SelectedItem.ToString() == "Bebidas - Sprint")
             {
                 txtPreco.Text = "4,50";
             }
-            else if (cbItens.SelectedItem.ToString() == "Suco - Taubaina")
+            else if (cbItens.SelectedItem.ToString() == "Bebidas - Taubaina")
             {
                 txtPreco.Text = "3,80";
             }
