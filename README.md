@@ -9,7 +9,7 @@
 ![Tela](https://github.com/Wesley-Silva/DemoFastFood/blob/master/FastFoodDemo/Imagens/tela_3.JPG)
 
 ## Pedido processado com sucesso
-![Tela](https://github.com/Wesley-Silva/DemoFastFood/blob/master/FastFoodDemo/Imagens/tela_3.JPG)
+![Tela](https://github.com/Wesley-Silva/DemoFastFood/blob/master/FastFoodDemo/Imagens/tela_4.JPG)
 
 ## Sobre
 Demo para simulação de um pedido de fastfood. As regras de negócios aplicada são simples e o objetivo dessa simulação é para desenvolvedores iniciantes. 
