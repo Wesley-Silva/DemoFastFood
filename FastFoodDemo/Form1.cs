@@ -39,7 +39,7 @@ namespace FastFoodDemo
 
         private void FirstCustomControl1_Load(object sender, EventArgs e)
         {
-
+            //Teste
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
